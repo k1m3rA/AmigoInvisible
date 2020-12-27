@@ -12,7 +12,7 @@ pip install random, smtplib, re
 ```
 Debes introducir en el archivo config.py las credenciales de acceso a tu cuenta de Gmail: correo y contraseña.
 
-[](ejemplo_config.JPG)
+![ejemplo credenciales](ejemplo_config.JPG)
 
 También debes acceder a tu cuenta de Google y activar la opción de Aplicaciones poco seguras -->
   [Aplicaciones poco seguras](https://support.google.com/accounts/answer/6010255?hl=es)
