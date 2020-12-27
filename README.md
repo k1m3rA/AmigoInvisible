@@ -2,7 +2,7 @@
 Programilla en Python3 para repartir amigos invisibles. Se enviará al correo de cada participante el amigo que les toque.
 
 La restricción por grupos consiste en que los miembros de un mismo grupo no podrán ser amigos invisibles entre ellos mismos.
-El código se puede mejorar y acepto pull requests.
+El código se puede mejorar y las pull requests son bienvenidas.
 ## Requisitos
 Debes tener Python3 instalado en tu sistema y ejecutar el siguiente comando en consola:
 ```console
