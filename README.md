@@ -12,7 +12,7 @@ Debes introducir en el archivo config.py las credenciales de acceso a tu cuenta 
 
 ![ejemplo credenciales](img/ejemplo_credenciales.jpg)
 
-También debes acceder a tu cuenta de Google y activar la opción de Aplicaciones poco seguras -->
+También debes acceder a tu cuenta de Google y activar la opción de
   [Aplicaciones poco seguras](https://support.google.com/accounts/answer/6010255?hl=es)
 ## Funcionamiento
 Accede a la carpeta donde se encuentre el proyecto y ejecuta el siguiente comando en la terminal o cmd:
