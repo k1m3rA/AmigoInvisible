@@ -67,7 +67,10 @@ def cantidades(msg):#NUMERO DE PARTICIPANTES
 
         try:
             cantidad = int(input(msg))
-            break
+            if cantidad<=1:
+                print("Debe ser un valor mayor a 1.")
+            else:   
+                break
         except:
             print("Introduzca un número válido.\n")
     return cantidad
@@ -91,21 +94,16 @@ if __name__ == "__main__":#INICIO DEL PROGRAMA E HILO PRINCIPAL
     num_participantes = cantidades(msg)
     if restr:#SI HAY RESTRICCIÓN DE GRUPO EL FLUJO SIGUE POR AQUÍ
         msg="Introduzca número de grupos: "
-        while True:
-            num_grupos = cantidades(msg)
-            if num_grupos<=1:
-                print("El número de grupos debe ser mayor a 1.")
-            else:
-                break
+        num_grupos=cantidades(msg)
         correos, participantes, grupos = introducir_datos(num_participantes, num_grupos)
     else:
         correos, participantes = introducir_datos(num_participantes,1)#LE DAS COMO VALOR DE num_grupos 1 PARA QUE NO PIDA ESE DATO
-    try:
-        if restr:
-            repartidor(correos,participantes,grupos)
-        else:
-            repartidor(correos, participantes,1)#LE DAS COMO VALOR DE grupos = 1 PARA QUE NO COMPARE NINGUN VALOR DE LOS GRUPOS
-    except:
-        print("Ha surgido un error en el envío. Por favor, inténtelo de nuevo.")
+    #try:
+    if restr:
+        repartidor(correos,participantes,grupos)
+    else:
+        repartidor(correos, participantes,1)#LE DAS COMO VALOR DE grupos = 1 PARA QUE NO COMPARE NINGUN VALOR DE LOS GRUPOS
+    #except:
+        #print("Ha surgido un error en el envío. Por favor, inténtelo de nuevo.")
     
     pass
