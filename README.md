@@ -6,7 +6,7 @@ El código se puede mejorar y las pull requests son bienvenidas.
 ## Requisitos
 Debes tener Python3 instalado en tu sistema y ejecutar el siguiente comando en consola:
 ```console
-pip install random, smtplib, re
+pip install random, smtplib, re, email
 ```
 Debes introducir en el archivo config.py las credenciales de acceso a tu cuenta de Gmail: correo y contraseña.
 
