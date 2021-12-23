@@ -1,5 +1,4 @@
 import random
-# Import smtp module
 import smtplib
 import config
 
