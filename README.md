@@ -8,7 +8,7 @@ Debes tener Python3 instalado en tu sistema y ejecutar el siguiente comando en c
 ```console
 pip install random, smtplib, re, email
 ```
-Debes introducir en el archivo config.py las credenciales de acceso a tu cuenta de Gmail: correo y contraseña.
+Debes introducir en el archivo config.json las credenciales de acceso a tu cuenta de Gmail: correo y contraseña.
 
 ![Ejemplo del archivo config.py](img/config_ejemplo.jpg)
 
