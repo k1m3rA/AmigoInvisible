@@ -23,17 +23,17 @@ def import_contacts(argument):
         for name, email in reader:
             # Creates a dictionary with two keys: name and email
             contact = {'name': name, 'email': email}
-
+            print(contact)
             # Adds the dictionary to list
             contacts.append(contact)
-
+    input()
     return contacts
 
 # Send email function
 def send_email(addressee, msg):
 
     # Create a SMTP object
-    s = smtplib.SMTP(config["host"], config["port"])
+    s = smtplib.SMTP(config["host"], int(config["port"]))
     # Start TLS encryption
     s.starttls()
     
@@ -44,7 +44,7 @@ def send_email(addressee, msg):
     # Add custom From field
     # with remitter name and email
     msg_processed.add_header('From', config["name"] + ' <' + config["remitter"] + '>')
-    msg_processed.add_header('Subject', "Invisble Friend")
+    msg_processed.add_header('Subject', "Invisible Friend")
 
     # Login with the given credentials
     s.login(config["remitter"], config["password"])
@@ -62,6 +62,9 @@ def deliver(contacts):
 
     for i in range(0, len(contacts)):
         try:
+            with open(contacts[i]["name"] + ".txt", "w") as f:
+                f.write(contacts[i]["name"] + " has to give " + contacts[(i+1)%len(contacts)]["name"] + " a gift.")
+                f.close()
             send_email(contacts[i]["email"], "Your Invisible Friend is " + contacts[(i+1)%len(contacts)]["name"])
             # Show in screen a message that the email was sent successfully
             print(contacts[i]["name"] + " has recieved the invisible friend.")
@@ -76,7 +79,6 @@ with open("config.json") as f:
 
 # Parse arguments
 parser = argparse.ArgumentParser()
-
 parser.add_argument("-f", "--file", type=str, help="Contacts file", required=True, dest="filename")
 args = parser.parse_args()
 
