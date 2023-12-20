@@ -1,7 +1,7 @@
 {
 "remitter":"name@mail.com",
 "name":"Invisible Friend",
-"password":"passwors",
+"password":"password",
 "host" : "smtp.gmail.com",
 "port" : "587"
 }

@@ -6,16 +6,22 @@ El código se puede mejorar y las pull requests son bienvenidas.
 ## Requisitos
 Debes tener Python3 instalado en tu sistema y ejecutar el siguiente comando en consola:
 ```console
-pip install random, smtplib, re, email
+pip install random smtplib re email
 ```
 Debes introducir en el archivo config.json las credenciales de acceso a tu cuenta de Gmail: correo y contraseña.
 
-![Ejemplo del archivo config.py](img/config_ejemplo.jpg)
+![Ejemplo del archivo config.py](img/example_config.png)
 
-También debes acceder a tu cuenta de Google y activar la opción de
-  [Aplicaciones poco seguras.](https://support.google.com/accounts/answer/6010255?hl=es)
+
+También debes activar una contraseña para la [aplicacion](https://support.google.com/accounts/answer/185833?hl=es) para que pueda enviar los correos.
+
 ## Funcionamiento
 Accede a la carpeta donde se encuentre el proyecto y ejecuta el siguiente comando en la terminal o cmd:
 ```console
-python3 main.py
+python3 main.py -f contactos.txt
 ```
+
+El archivo de contactos.txt debe contener un destinatario en cada linea, de este modo:
+
+nombre:correo@mail.com\
+nombre2:correo2@mail.com
