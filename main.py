@@ -44,7 +44,7 @@ def send_email(addressee, msg):
     # Add custom From field
     # with remitter name and email
     msg_processed.add_header('From', config["name"] + ' <' + config["remitter"] + '>')
-    msg_processed.add_header('Subject', "Invisible Friend")
+    msg_processed.add_header('Subject', "Secret Santa")
 
     # Login with the given credentials
     s.login(config["remitter"], config["password"])
